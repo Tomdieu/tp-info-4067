@@ -1,16 +1,31 @@
 import com.factory.FabriqueAbstraite;
 import com.factory.FabriqueConcrete1;
+import com.factory.FabriqueConcrete2;
+import com.factory.FabriqueConcrete3;
 import com.produit.ProduitA;
-import com.produit.ProduitB;
 
 public class App {
     public static void main(String[] args) throws Exception {
 
-        FabriqueAbstraite fabriqueAbstraite = new FabriqueConcrete1();
+        // For Produit A1
 
-        ProduitA produitA = fabriqueAbstraite.createProduitA();
+        FabriqueAbstraite fabriqueAbstraite1 = new FabriqueConcrete1();
+
+        ProduitA produitA = fabriqueAbstraite1.createProduitA();
         produitA.methodA();
-        ProduitB produitB = fabriqueAbstraite.createProduitB();
-        produitB.methodB();
+
+        // For Produit A2
+
+        FabriqueAbstraite fabriqueAbstraite2 = new FabriqueConcrete2();
+
+        ProduitA produitA2 = fabriqueAbstraite2.createProduitA();
+        produitA2.methodA();
+
+        // For Produit A3
+
+        FabriqueAbstraite fabriqueAbstraite3 = new FabriqueConcrete3();
+        ProduitA produitA3 = fabriqueAbstraite3.createProduitA();
+        produitA3.methodA();
+
     }
 }
