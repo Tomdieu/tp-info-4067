@@ -39,11 +39,7 @@ public final class Arithmetic {
         if (instance == null) {
             instance = new Arithmetic(x, y, nom);
         }
-        else{
-            instance.x = x;
-            instance.y = y;
-            instance.nom = nom;
-        }
+        
         return instance;
     }
 
