@@ -1,6 +1,6 @@
 package com.pizza;
 
-class Pizza {
+public class Pizza {
     private String pate = "";
     private String sauce = "";
     private String garniture = "";
@@ -24,5 +24,8 @@ class Pizza {
         this.garniture = garniture;
     }
 
+    public void print(){
+        System.out.println("Pizza: " + pate + " " + sauce + " " + garniture);
+    }
 
 }
