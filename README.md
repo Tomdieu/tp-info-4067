@@ -2,6 +2,14 @@
 
 This is where I will store all my java related code for the course `INFO 4067`
 
+## Patterns
+
+This is where I will store all the patterns that I will be learning in the course
+
+- [Factory Pattern](#factory-pattern)
+- [Singleton Pattern](#singleton-factory)
+- [Builder Pattern](#builder-pattern)
+
 ## Factory Pattern
 
 This are all the exercises for the factory pattern
