@@ -65,7 +65,7 @@ This are all the exercises for the factory pattern
 
     - ProduitA1
 
-    This is the concrete class that will be used to create the different products
+    This is the concrete class that will be used to create the ProduitA1 products
 
     ```java
     package com.produit;
@@ -79,7 +79,7 @@ This are all the exercises for the factory pattern
 
     - ProduitA2
 
-    This is the concrete class that will be used to create the different products
+    This is the concrete class that will be used to create the ProduitA2 products
 
     ```java
     package com.produit;
@@ -94,7 +94,7 @@ This are all the exercises for the factory pattern
 
     - ProduitA3
 
-    This is the concrete class that will be used to create the different products
+    This is the concrete class that will be used to create the ProduitA3 products
 
     ```java
     package com.produit;
@@ -106,7 +106,7 @@ This are all the exercises for the factory pattern
     }
     ```
 
-    ### Main Class
+    Main Class
 
     This is the main class that will be used to test the factory pattern
 
