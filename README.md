@@ -6,9 +6,14 @@ This is where I will store all my java related code for the course `INFO 4067`
 
 This is where I will store all the patterns that I will be learning in the course
 
+## Topic
+
 - [Factory Pattern](#factory-pattern)
 - [Singleton Pattern](#singleton-factory)
 - [Builder Pattern](#builder-pattern)
+- [Adapter Pattern](#adapter-pattern)
+- [Composite Pattern](#composite-pattern)
+- [Bridge Pattern](#bridge-pattern)
 
 ## Factory Pattern
 
@@ -454,3 +459,9 @@ This are all the exercises for the singleton factory pattern
 ## Builder Pattern
 
 This are all the exercises for the builder pattern
+
+## Adapter Pattern
+
+## Composite Pattern
+
+## Bridge Pattern
