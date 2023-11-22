@@ -1,4 +1,10 @@
-# Builder Pattern
+# TP INFO 4067
+
+Nom : **Tomdieu TchadieuKo Ivan Gottfried**
+
+Matricule : **20U2947**
+
+## Builder Pattern
 
 On souhaite fabriquer des pizza. On a 2 types de pizza : la pizza
 reine et le pizza piquante,
@@ -15,6 +21,6 @@ des pizza.
 1. Proposer une modélisation sous forme de diagramme de classe
 2. Proposer le code source correspondant.
 
-## Diagramme de classe
+### Diagramme de classe
 
 ![Diagramme de classe](./uml.png)
