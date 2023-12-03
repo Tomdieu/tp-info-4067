@@ -2,466 +2,116 @@
 
 This is where I will store all my java related code for the course `INFO 4067`
 
-## Patterns
+## Design Patterns
 
-This is where I will store all the patterns that I will be learning in the course
+Design patterns are typical solutions to common problems
+in software design. Each pattern is like a blueprint
+that you can customize to solve a particular
+design problem in your code.
 
 ## Topic
 
-- [Factory Pattern](#factory-pattern)
-- [Singleton Pattern](#singleton-factory)
-- [Builder Pattern](#builder-pattern)
-- [Adapter Pattern](#adapter-pattern)
-- [Composite Pattern](#composite-pattern)
-- [Bridge Pattern](#bridge-pattern)
+- **Creational Pattern**
 
-## Factory Pattern
+  - [Factory Method](#factory-pattern)
+  - [Abstract Factory](#abstract-factory)
+  - [Singleton](#singleton-factory)
+  - [Builder](#builder-pattern)
 
-This are all the exercises for the factory pattern
+- **Structural Pattern**
 
-- **Exo 1**
+  - [Adapter Pattern](#adapter-pattern)
+  - [Composite Pattern](#composite-pattern)
+  - [Bridge Pattern](#bridge-pattern)
+  - [Decorator Pattern](#decorator-pattern)
+  - [Facade Pattern](#facade-pattern)
+  - [Proxy Pattern](#proxy-pattern)
 
-    **Product Factory Class**
+<details>
 
-    The class below is the factory class that will be used to create the different products
+<summary>
 
-    ```java
-    package com.factory;
+## Creational Patterns
 
-    import com.produit.ProduitA;
-    import com.produit.ProduitA1;
-    import com.produit.ProduitA2;
-    import com.produit.ProduitA3;
+</summary>
 
-    public class ProduitFactory {
-        public static final int TYPE_PRODUITA1 = 1;
-        public static final int TYPE_PRODUITA2 = 2;
-        public static final int TYPE_PRODUITA3 = 3;
+### 1. Factory Method
 
-        public ProduitA geProduitA(int typeProduit) throws IllegalAccessException{
-            ProduitA produitA;
-            switch (typeProduit) {
-                case TYPE_PRODUITA1:
-                    produitA = new ProduitA1();
-                    break;
-                case TYPE_PRODUITA2:
-                    produitA = new ProduitA2();
-                    break;
-                case TYPE_PRODUITA3:
-                    produitA = new ProduitA3();
-                    break;
-                default:
-                    throw new IllegalAccessException("Type de produit inconnu");
-            }
-            return produitA;
-        }
-    }
-    ```
+The Factory Pattern is a creational pattern that provides an interface for creating objects in a superclass but allows subclasses to alter the type of objects that will be created. It involves an interface for creating objects, with its subclasses deciding which class to instantiate.
 
-    **Classe Abstraite de produit**
+![Factory Method](https://refactoring.guru/images/patterns/diagrams/factory-method/example.png "Factory Method")
 
-  - ProduitA
+### 2. Abstract Factory
 
-    This is the abstract class that will be used to create the different products
+The Abstract Factory Pattern is a creational pattern that provides an interface for creating families of related or dependent objects without specifying their concrete classes. It involves a single interface to create objects of related types.
 
-    ```java
-    package com.produit;
+![Abstract Factory](https://refactoring.guru/images/patterns/diagrams/abstract-factory/example.png "Abstract Factory")
 
-    public abstract class ProduitA {
-        public abstract void methodA();
-        
-    }
+### 2. Singleton
 
-    ```
+The Singleton Pattern is a creational pattern that ensures a class has only one instance and provides a global point to that instance. It is useful when exactly one object is needed to coordinate actions across the system.
 
-    **Classe Concrete De produit**
+![Singleton](https://refactoring.guru/images/patterns/diagrams/singleton/structure-en.png "Singleton")
 
-    - ProduitA1
+### 3. Builder Pattern
 
-    This is the concrete class that will be used to create the ProduitA1 products
+The Builder Pattern is a creational pattern that separates the construction of a complex object from its representation, allowing the same construction process to create different representations. It involves a director class and various builder classes for constructing different parts of the object.
 
-    ```java
-    package com.produit;
+![Builder](https://refactoring.guru/images/patterns/diagrams/builder/structure.png "Builder")
 
-    public class ProduitA1 extends ProduitA {
-        public void methodA() {
-            System.out.println("ProduitA1.methodA()");
-        }
-    }
-    ```
+</details>
 
-    - ProduitA2
+<details>
 
-    This is the concrete class that will be used to create the ProduitA2 products
+<summary>
 
-    ```java
-    package com.produit;
+### Structural Pattern
 
-    public class ProduitA2 extends ProduitA{
-        public void methodA() {
-            System.out.println("ProduitA2.methodA()");
-        }
-    }
+</summary>
 
-    ```
+### Adapter Pattern
 
-    - ProduitA3
+The Adapter Pattern is a structural pattern that allows the interface of an existing class to be used as another interface. It is often used to make existing classes work with others without modifying their source code.
 
-    This is the concrete class that will be used to create the ProduitA3 products
+![Adapter](https://refactoring.guru/images/patterns/diagrams/adapter/structure-object-adapter.png "Adapter")
 
-    ```java
-    package com.produit;
+### Composite Pattern
 
-    public class ProduitA3 extends ProduitA {
-        public void methodA() {
-            System.out.println("ProduitA3.methodA()");
-        }    
-    }
-    ```
+The Composite Pattern is a structural pattern that lets you compose objects into tree structures to represent part-whole hierarchies. It allows clients to treat individual objects and compositions of objects uniformly.
 
-    Main Class
+![Composite](https://refactoring.guru/images/patterns/diagrams/composite/example.png "Composite")
 
-    This is the main class that will be used to test the factory pattern
+### Bridge Pattern
 
-    ```java
-    import com.factory.ProduitFactory;
-    import com.produit.ProduitA;
+The Bridge Pattern is a structural pattern that separates an abstraction from its implementation so that the two can vary independently. It involves creating a bridge interface that uses composition to separate the abstraction and its implementation.
 
-    public class App {
-        public static void main(String[] args) throws Exception {
-            ProduitFactory produitFactory = new ProduitFactory();
+![Bridge](https://refactoring.guru/images/patterns/diagrams/bridge/example-en.png "Bridge")
 
-            ProduitA produitA = null;
+### Decorator Pattern
 
-            produitA = produitFactory.geProduitA(ProduitFactory.TYPE_PRODUITA1);
-            produitA.methodA();
+The Decorator Pattern is a structural pattern that allows behavior to be added to an individual object, either statically or dynamically, without affecting the behavior of other objects from the same class. It involves a set of decorator classes that are used to wrap concrete components.
 
-            produitA = produitFactory.geProduitA(ProduitFactory.TYPE_PRODUITA2);
-            produitA.methodA();
+![Decorator](https://refactoring.guru/images/patterns/diagrams/decorator/example.png "Decorator")
 
-            produitA = produitFactory.geProduitA(ProduitFactory.TYPE_PRODUITA3);
-            produitA.methodA();
-        }
-    }
 
-    ```
+### Facade Pattern
 
-    Class Diagram
+The Facade Pattern is a structural pattern that provides a simplified interface to a library, a framework, or any other complex set of classes. It involves a single wrapper class that contains a set of members required by the client.
 
-    ![Image](./Factory%20Pattern/Exo%201/diagram.png "diagram")
-- **Exo 2**
+![Facade](https://refactoring.guru/images/patterns/diagrams/facade/example.png "Facade")
 
-    This is the updated version of the first exercise but we added a third product
+### Proxy Pattern
 
-    **Product Factory Class**
+The Proxy Pattern is a structural pattern that provides an object that acts as a substitute for a real service object used by a client. It involves a communication between the real object and the proxy object, which forwards the request to the real object.
 
-  - Abstract Product Factory
+![Proxy](https://refactoring.guru/images/patterns/diagrams/proxy/example.png "Proxy")
 
-    This is the abstract factory class that will be used to create the different products
+</details>
 
-    ```java
-    package com.factory;
 
-    import com.produit.ProduitA;
-    import com.produit.ProduitB;
-    import com.produit.ProduitC;
+## References
 
-    public abstract class FabriqueAbstraite {
-        public abstract ProduitA createProduitA();
+images from [refactoring.guru](https://refactoring.guru/design-patterns)
 
-        public abstract ProduitB createProduitB();
-
-        public abstract ProduitC createProduitC();
-
-    }
-    ```
-
-    - Concrete Product Factory
-
-      - FabriqueConcrete1
-
-        ```java
-        package com.factory;
-
-        import com.produit.ProduitA;
-        import com.produit.ProduitA1;
-        import com.produit.ProduitB;
-        import com.produit.ProduitB1;
-        import com.produit.ProduitC;
-        import com.produit.ProduitC1;
-
-        public class FabriqueConcrete1 extends FabriqueAbstraite {
-
-            @Override
-            public ProduitA createProduitA() {
-                return new ProduitA1();
-            }
-
-            @Override
-            public ProduitB createProduitB() {
-                return new ProduitB1();
-            }
-
-            @Override
-            public ProduitC createProduitC() {
-                return new ProduitC1();
-            }
-            
-        }
-        ```
-
-        - FabriqueConcrete2
-
-            ```java
-            package com.factory;
-
-            import com.produit.ProduitA;
-            import com.produit.ProduitA2;
-            import com.produit.ProduitB;
-            import com.produit.ProduitB2;
-            import com.produit.ProduitC;
-            import com.produit.ProduitC2;
-
-            public class FabriqueConcrete2 extends FabriqueAbstraite {
-                @Override
-                public ProduitA createProduitA() {
-                    return new ProduitA2();
-                }
-
-                @Override
-                public ProduitB createProduitB() {
-                    return new ProduitB2();
-                }
-
-                @Override
-                public ProduitC createProduitC() {
-                    return new ProduitC2();
-                }
-            }
-
-            ```
-
-        - FabriqueConcrete3
-
-            ```java
-            package com.factory;
-
-            import com.produit.ProduitA;
-            import com.produit.ProduitA3;
-            import com.produit.ProduitB;
-            import com.produit.ProduitB3;
-            import com.produit.ProduitC;
-            import com.produit.ProduitC3;
-            public class FabriqueConcrete3 extends FabriqueAbstraite{
-                @Override
-                public ProduitA createProduitA() {
-                    return new ProduitA3();
-                }
-
-                @Override
-                public ProduitB createProduitB() {
-                    return new ProduitB3();
-                }
-
-                @Override
-                public ProduitC createProduitC() {
-                    return new ProduitC3();
-                }
-            }
-
-            ```
-
-    Uml Diagram
-
-    ![Image](./Factory%20Pattern/Exo%202/diagram.png "diagram")
-
-## Singleton Factory
-
-This are all the exercises for the singleton factory pattern
-
-- **Exo1**
-
-  - **Singleton Class**
-
-    This is the first example on Singleton
-
-    ```java
-    package com.singleton;
-
-    public final class Singleton {
-        private static Singleton instance = null;
-        private int x;
-        private int y;
-
-        private Singleton() {
-
-            super();
-        }
-
-        private Singleton(int x, int y) {
-            this.x = x;
-            this.y = y;
-        }
-
-        public static Singleton getInstance() {
-            if (instance == null) {
-                instance = new Singleton();
-            }
-            return instance;
-        }
-
-        public static Singleton getInstance(int x, int y) {
-            if (instance == null) {
-                instance = new Singleton(x, y);
-            }
-            return instance;
-        }
-
-        public int somme(int x, int y) {
-            return x + y;
-        }
-
-        public float moyenne(int x, int y) {
-            return somme(x, y) / 2;
-        }
-
-        public void affiche() {
-            System.out.println("\nJe suis une instance mes\n" +
-                    "valeurs sont x = " + x + " y = " + y);
-        }
-
-        @Override
-        public Object clone() throws CloneNotSupportedException{
-            throw new CloneNotSupportedException();
-        }
-
-    }
-    ```
-
-  - App.java
-
-    This file is use to call the Singleton Class
-
-    ```java
-    import com.singleton.Singleton;
-
-    public class App {
-        public static void main(String[] args) throws Exception {
-            int som = Singleton.getInstance().somme(2, 5);
-            System.out.printf("la somme est %d",som);
-            Singleton s1 = Singleton.getInstance(8, 3);
-            s1.affiche();
-
-            Singleton s2 = Singleton.getInstance(5, 9);
-            s2.affiche();
-        }
-    }
-    ```
-
-    Uml Class Diagram
-
-    ![Image](./Singleton%20Pattern/Exo1/diagram.png "diagram")
-
-- **Exo2**
-    This is an updated version of the Singleton above another attribute `nom`
-
-  - Arithmetic Singleton Class
-
-    ```java
-    package com.singleton;
-
-    public final class Arithmetic {
-        private static Arithmetic instance = null;
-        private int x;
-        private int y;
-        private String nom;
-
-        private Arithmetic() {
-            super();
-        }
-
-        private Arithmetic(int x, int y, String nom) {
-            this.x = x;
-            this.y = y;
-            this.nom = nom;
-        }
-
-        public int add(int a, int b) {
-            return a + b;
-        }
-
-        public float divide(int a, int b) {
-            return (float) a / b;
-        }
-
-        public float mean(int a, int b) {
-            return add(a, b) / 2;
-        }
-
-        public static Arithmetic getArithmetic() {
-            if (instance == null) {
-                instance = new Arithmetic();
-            }
-            return instance;
-        }
-
-        public static Arithmetic getArithmetic(int x, int y, String nom) {
-            if (instance == null) {
-                instance = new Arithmetic(x, y, nom);
-            }
-            
-            return instance;
-        }
-
-        public void affiche() {
-            System.out.println("Je suis une instance avec les valeurs \n: x = " + this.x + " y = " + this.y + " nom = " + this.nom);
-        }
-
-        @Override
-        public Object clone() throws CloneNotSupportedException {
-            throw new CloneNotSupportedException();
-        }
-    }
-
-    ```
-
-  - App.java
-
-    ```java
-    import com.singleton.Arithmetic;
-
-    public class App {
-        public static void main(String[] args) throws Exception {
-
-            
-            int sum = Arithmetic.getArithmetic().add(5, 1);
-
-            System.out.println("Sum is : "+sum);
-
-            //Output : Sum is : 6
-
-            Arithmetic a1 = Arithmetic.getArithmetic(5,8,"ivantom");
-            a1.affiche();
-
-            //Output : Je suis une instance avec les valeurs : x = 0 y = 0 nom = null
-
-            Arithmetic b1 = Arithmetic.getArithmetic(-52, 25, "Tomdieu");
-            b1.affiche();
-
-            //Je suis une instance avec les valeurs : x = 0 y = 0 nom = null
-        }
-    }
-
-    ```
-
-    ![Image](./Singleton%20Pattern/Exo2/diagram.png "diagram")
-
-## Builder Pattern
-
-This are all the exercises for the builder pattern
-
-## Adapter Pattern
-
-## Composite Pattern
-
-## Bridge Pattern
+- [Design Patterns](https://refactoring.guru/design-patterns)
+- [Design Patterns in Java](https://www.baeldung.com/java-design-patterns)
