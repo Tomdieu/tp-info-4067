@@ -9,12 +9,18 @@ public class Dossier extends SystemFichier{
 
     @Override
     public void decrire() {
-
+        System.out.println("Je Suis un dossier avec nom "+getNom()+" et fichier : ");
+        for(SystemFichier systemFichier:sousRepertoire){
+            systemFichier.decrire();
+        }
     }
 
     @Override
     public void ajouter(SystemFichier fichier) {
         super.ajouter(fichier);
+        if (this.sousRepertoire == null){
+            this.sousRepertoire = new LinkedList<SystemFichier>();
+        }
         this.sousRepertoire.add(fichier);
     }
 

@@ -4,7 +4,9 @@ Nom : **Tomdieu TchadieuKo Ivan Gottfried**
 
 Matricule : **20U2947**
 
-## Abstract Factory Pattern with 2 Products
+Design Pattern Category : **Structural**
+
+Design Pattern : **Composite**
 
 ## Exercice
 
