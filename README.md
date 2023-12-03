@@ -139,49 +139,49 @@ The Observer Pattern is a behavioral pattern that defines a one-to-many dependen
 
 The Strategy Pattern is a behavioral pattern that defines a family of algorithms, encapsulates each one, and makes them interchangeable. It allows the algorithm to vary independently from clients that use it. It involves a strategy interface declaring an operation common to all supported algorithms. Context uses this interface to call the algorithm defined by a concrete strategy.
 
-![Strategy](https://refactoring.guru/images/patterns/diagrams/strategy/example-en.png "Strategy")
+![Strategy](https://refactoring.guru/images/patterns/diagrams/strategy/structure.png "Strategy")
 
 ### Command
 
 The Command Pattern is a behavioral pattern that turns a request into a stand-alone object that contains all information about the request. This transformation lets you pass requests as a method argument, delay or queue a request’s execution, and support undoable operations. It involves an invoker class that contains the execute method and a set of commands implementing the same interface.
 
-![Command](https://refactoring.guru/images/patterns/diagrams/command/example-en.png "Command")
+![Command](https://refactoring.guru/images/patterns/diagrams/command/structure.png "Command")
 
 ### Iterator
 
 The Iterator Pattern is a behavioral pattern that provides a way to access the elements of an aggregate object sequentially without exposing its underlying representation. It involves an iterator interface with methods like hasNext, next, etc., and a collection interface with methods like iterator or getIterator.
 
-![Iterator](https://refactoring.guru/images/patterns/diagrams/iterator/example-en.png "Iterator")
+![Iterator](https://refactoring.guru/images/patterns/diagrams/iterator/structure.png "Iterator")
 
 ### Mediator
 
 The Mediator Pattern is a behavioral pattern that defines an object that encapsulates how a set of objects interact. It involves a mediator class that exposes methods that communicate with colleague objects. Each colleague class knows its mediator object, and communicates with it whenever needed.
 
-![Mediator](https://refactoring.guru/images/patterns/diagrams/mediator/example-en.png "Mediator")
+![Mediator](https://refactoring.guru/images/patterns/diagrams/mediator/example.png "Mediator")
 
 ### Memento
 
 The Memento Pattern is a behavioral pattern that allows an object to return to one of its previous states. It involves three parts, the originator, the memento, and the caretaker. The originator is the object whose state needs to be saved and restored and it creates and stores states in the memento object. The caretaker object is responsible for the memento's safekeeping, but never operates on or examines the contents of the memento.
 
-![Memento](https://refactoring.guru/images/patterns/diagrams/memento/example-en.png "Memento")
+![Memento](https://refactoring.guru/images/patterns/diagrams/memento/structure3.png "Memento")
 
 ### State
 
 The State Pattern is a behavioral pattern that allows an object to alter its behavior when its internal state changes. It involves a set of concrete states inheriting from a state interface. The context class contains a state instance that is initialized to a concrete state.
 
-![State](https://refactoring.guru/images/patterns/diagrams/state/example-en.png "State")
+![State](https://refactoring.guru/images/patterns/diagrams/state/structure-en.png "State")
 
 ### Template Method
 
 The Template Method Pattern is a behavioral pattern that defines the skeleton of an algorithm in a method, deferring some steps to subclasses. It lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure. It involves an abstract class defining the skeleton, the template method, and concrete classes implementing the steps.
 
-![Template Method](https://refactoring.guru/images/patterns/diagrams/template-method/example-en.png "Template Method")
+![Template Method](https://refactoring.guru/images/patterns/diagrams/template-method/structure.png "Template Method")
 
 ### Visitor
 
 The Visitor Pattern is a behavioral pattern that lets you separate algorithms from the objects on which they operate. It involves a visitor class that changes the executing algorithm of an element class. It allows adding new behaviors to existing class hierarchies without altering any existing code.
 
-![Visitor](https://refactoring.guru/images/patterns/diagrams/visitor/example-en.png "Visitor")
+![Visitor](https://refactoring.guru/images/patterns/diagrams/visitor/structure-en.png "Visitor")
 
 ### Chain of Responsibility
 
