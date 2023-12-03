@@ -11,14 +11,14 @@ design problem in your code.
 
 ## Topic
 
-- **Creational Pattern**
+- [**Creational Pattern**](#creational-patterns)
 
   - [Factory Method](#factory-pattern)
   - [Abstract Factory](#abstract-factory)
   - [Singleton](#singleton-factory)
   - [Builder](#builder-pattern)
 
-- **Structural Pattern**
+- [**Structural Pattern**](#structural-pattern)
 
   - [Adapter Pattern](#adapter-pattern)
   - [Composite Pattern](#composite-pattern)
@@ -92,7 +92,6 @@ The Bridge Pattern is a structural pattern that separates an abstraction from it
 The Decorator Pattern is a structural pattern that allows behavior to be added to an individual object, either statically or dynamically, without affecting the behavior of other objects from the same class. It involves a set of decorator classes that are used to wrap concrete components.
 
 ![Decorator](https://refactoring.guru/images/patterns/diagrams/decorator/example.png "Decorator")
-
 
 ### Facade Pattern
 
