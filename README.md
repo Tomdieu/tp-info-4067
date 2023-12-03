@@ -47,13 +47,13 @@ The Abstract Factory Pattern is a creational pattern that provides an interface 
 
 ![Abstract Factory](https://refactoring.guru/images/patterns/diagrams/abstract-factory/example.png "Abstract Factory")
 
-### 2. Singleton
+### 3. Singleton
 
 The Singleton Pattern is a creational pattern that ensures a class has only one instance and provides a global point to that instance. It is useful when exactly one object is needed to coordinate actions across the system.
 
 ![Singleton](https://refactoring.guru/images/patterns/diagrams/singleton/structure-en.png "Singleton")
 
-### 3. Builder Pattern
+### 4. Builder Pattern
 
 The Builder Pattern is a creational pattern that separates the construction of a complex object from its representation, allowing the same construction process to create different representations. It involves a director class and various builder classes for constructing different parts of the object.
 
