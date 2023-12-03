@@ -65,7 +65,7 @@ The Builder Pattern is a creational pattern that separates the construction of a
 
 <summary>
 
-### Structural Pattern
+## Structural Pattern
 
 </summary>
 
@@ -107,7 +107,6 @@ The Proxy Pattern is a structural pattern that provides an object that acts as a
 ![Proxy](https://refactoring.guru/images/patterns/diagrams/proxy/example.png "Proxy")
 
 </details>
-
 
 ## References
 
